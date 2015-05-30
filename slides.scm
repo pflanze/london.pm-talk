@@ -78,7 +78,7 @@ for (1..1e6) { outer 10 };")))
 non-functional program to do them")
 	     (li "can use method calls if all method implementations are pure")))
 
-     (slide "Function programming: why?"
+     (slide "Functional programming: why?"
 	    (ul
 	     ;; if only pure functions are used, then 
 	     (li "dependencies and flow of data are directly visible from expressions"
