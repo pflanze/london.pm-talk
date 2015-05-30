@@ -297,7 +297,7 @@ $VAR1 = [ 1,1,2,3,5,8,13,21,34,55 ];"))
      (slide ""
 	    (p "Thanks for listening!")
 	    (p "Questions?")
-	    (p "Get code from " (http-link "https://github.com/pflanze/functional-perl"))
+	    (p "Get code from " (link "https://github.com/pflanze/functional-perl"))
 	    (p "and discuss on " (http-link "functional-perl.org"))
 	    ;; (p "Mailing list! Github! Github wiki?")
 	    )
