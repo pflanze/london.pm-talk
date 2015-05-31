@@ -230,7 +230,7 @@ non-functional program to do them</li><li>can use method calls if all method imp
     <span class="i">&amp;$inner</span><span class="s">(</span><span class="i">$n</span><span class="cm">,</span> <span class="n">1</span><span class="s">)</span><span class="sc">;</span>
 <span class="s">}</span>
 
-</pre></div><div class="slide"><h1>Combinators</h1><ul><li>"A combinator is a higher-order function that uses only function application and earlier defined combinators to define a result from its arguments."  <small>(https://en.wikipedia.org/wiki/Combinator)</small></li><li>example: function composition<table cols="2" border="0" cellpadding="8"><tr><td colspan="2">
+</pre></div><div class="slide"><h1>Combinators</h1><ul><li>“A combinator is a higher-order function that uses only function application and earlier defined combinators to define a result from its arguments."  <small><nobr>( <a href="https://en.wikipedia.org/wiki/Combinator">en.wikipedia.org/wiki/Combinator</a></nobr>)</small></li><li>example: function composition<table cols="2" border="0" cellpadding="8"><tr><td colspan="2">
 <pre>
 <span class="k">func</span> <span class="w">compose</span> <span class="s">(</span><span class="i">$f</span><span class="cm">,</span><span class="i">$g</span><span class="s">)</span> <span class="s">{</span> <span class="k">sub</span> <span class="s">{</span> <span class="i">&amp;$f</span> <span class="s">(</span><span class="i">&amp;$g</span> <span class="s">(</span><span class="i">@_</span><span class="s">)</span><span class="s">)</span> <span class="s">}</span> <span class="s">}</span>
 

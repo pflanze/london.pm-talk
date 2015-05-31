@@ -212,8 +212,9 @@ func outer ($n) {
 
      (slide "Combinators"
 	    (ul
-	     (li "\"A combinator is a higher-order function that uses only function application and earlier defined combinators to define a result from its arguments.\"  "
-		 (small "(https://en.wikipedia.org/wiki/Combinator)"))
+	     (li (pretty-quotes "\"A combinator is a higher-order function that uses only function application and earlier defined combinators to define a result from its arguments.\"  ")
+		 (small
+		  (nobr "("(https-link "en.wikipedia.org/wiki/Combinator"))")"))
 	     (li
 	      "example: function composition"
 	      `(table

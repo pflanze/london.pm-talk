@@ -137,6 +137,7 @@
 ;; (i/load "lib/svg")
 
 
+(i/load "pretty-quotes")
 (i/load "slides-lib")
 (i/load "slides")
 

@@ -118,6 +118,7 @@
 (dtag p)
 (dtag i)
 (dtag b)
+(dtag nobr)
 
 
 (def (ahref href . body)
@@ -128,9 +129,14 @@
      ;; heh space before so it doesn't attach to whatever is before hm
      `(" " ,(ahref ref ref)))
 
-(def (http-link ref-without-protocol)
-     `(" " ,(ahref (string-append "http://" ref-without-protocol)
-		   ref-without-protocol)))
+(def (_-link prot)
+     (lambda (ref-without-protocol)
+       `(" " ,(ahref (string-append prot ref-without-protocol)
+		     ref-without-protocol))))
+
+(def http-link (_-link "http://"))
+(def https-link (_-link "https://"))
+
 
 ;; (def (footnote . body)
 ;;      '()) ;; SGH + begin sigh
