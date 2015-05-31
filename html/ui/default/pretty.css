@@ -1,7 +1,8 @@
 /* Following are the presentation styles -- edit away! */
 
 body {
-  background: #FFF url(bodybg.gif) -16px 0 no-repeat;
+  background: #FFF url(../../slides-background-tree.png) -16px 0 no-repeat;
+  /* ^ not sure where this has an effect! */
   color: #000;
   font-size: 2em;
 }
@@ -116,7 +117,9 @@ div#header, div#footer {
   font-family: Verdana, Helvetica, sans-serif;
 }
 div#header {
-  background: #005 url(bodybg.gif) -16px 0 no-repeat;
+  background: #005 url(../../slides-background-tree.png) -16px 0 no-repeat;
+  /* ^ blue background color */
+  background-size: 26% 270%;
   line-height: 1px;
 }
 div#footer {
@@ -146,7 +149,9 @@ div.long {
   font: bold 150%/1em Helvetica, sans-serif;
   text-transform: capitalize;
   color: #DDE;
-  background: #005;
+  background: transparent;
+  text-shadow: -2px 0 0.2em #005, 0 2px 0.2em #005, 2px 0 0.2em #005, 0 -2px 0.2em #005;
+  /* ^ copy of blue background color */
 }
 .slide h3 {
   font-size: 130%;
@@ -212,6 +217,7 @@ div#controls form {
   white-space: normal;
    color: #000;
   background: transparent;
+  text-shadow: none;
 }
 #slide0 h2 {
   font: bold italic 1em Helvetica, sans-serif;
