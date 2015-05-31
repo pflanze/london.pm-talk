@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -euo pipefail
+IFS=
+# remember, *still* need to quote variables!
+
+echo 'foo;' | perltidy --html -ntoc | perl -we '
+  local $/;
+  $txt= <STDIN>;
+  my ($str)= $txt=~ m{(<style type="text/css">.*?</style>)}s
+     or die "no match for CSS part";
+  print $str or die $!
+'

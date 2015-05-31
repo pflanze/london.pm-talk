@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -euo pipefail
+IFS=
+# remember, *still* need to quote variables!
+
+echo "$1" | perltidy --html -ntoc | perl -we '
+  local $/;
+  $txt= <STDIN>;
+  $txt=~ s/.*<!-- contents of filename: perltidy -->//s or die 1;
+  $txt=~ s{</body>\s*</html>\s*\z}{}s;
+  print $txt or die $!
+'
