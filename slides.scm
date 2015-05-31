@@ -6,7 +6,8 @@
 
 
 (def (show-complement f)
-     (lambda (x)
+     (lambda (x) ;; can't replace with vs since used in places where no
+	    ;; list accepted
        (if (f #t)
 	   #f
 	   x)))
@@ -163,7 +164,11 @@ use strict; use warnings; use warnings FATAL => 'uninitialized';") (THREE "
 
 func odd ($n) { $n == 0 ? 0 : tail even ($n - 1) }
 func even ($n) { $n == 0 ? 1 : tail odd ($n - 1) }
-odd 137001 # -> 1"))))
+odd 137001 # -> 1")
+		  ((show-complement TWO)
+		   (PerlCod "# alternatively:
+func odd ($n) { $n == 0 ? 0 : do { @_=($n - 1); goto \\&even } }
+...")))))
 
      ;; mention trampolining? nah (perhaps say it)
      ;; (mention stack trace topic? (trampolines don't solve this anyw))

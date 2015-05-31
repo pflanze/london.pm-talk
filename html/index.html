@@ -109,6 +109,11 @@ non-functional program to do them</li><li>can use method calls if all method imp
 <span class="k">func</span> <span class="w">odd</span> <span class="s">(</span><span class="i">$n</span><span class="s">)</span> <span class="s">{</span> <span class="i">$n</span> == <span class="n">0</span> ? <span class="n">0</span> <span class="co">:</span> <span class="w">tail</span> <span class="w">even</span> <span class="s">(</span><span class="i">$n</span> - <span class="n">1</span><span class="s">)</span> <span class="s">}</span>
 <span class="k">func</span> <span class="w">even</span> <span class="s">(</span><span class="i">$n</span><span class="s">)</span> <span class="s">{</span> <span class="i">$n</span> == <span class="n">0</span> ? <span class="n">1</span> <span class="co">:</span> <span class="w">tail</span> <span class="w">odd</span> <span class="s">(</span><span class="i">$n</span> - <span class="n">1</span><span class="s">)</span> <span class="s">}</span>
 <span class="w">odd</span> <span class="n">137001</span> <span class="c"># -&gt; 1</span>
+</pre>
+<pre>
+<span class="c"># alternatively:</span>
+<span class="k">func</span> <span class="w">odd</span> <span class="s">(</span><span class="i">$n</span><span class="s">)</span> <span class="s">{</span> <span class="i">$n</span> == <span class="n">0</span> ? <span class="n">0</span> <span class="co">:</span> <span class="k">do</span> <span class="s">{</span> <span class="i">@_</span>=<span class="s">(</span><span class="i">$n</span> - <span class="n">1</span><span class="s">)</span><span class="sc">;</span> <span class="k">goto</span> \<span class="i">&amp;even</span> <span class="s">}</span> <span class="s">}</span>
+...
 </pre></li></ul></div><div class="slide"><h1>Perl can do it better III</h1><ul><li>iteration by recursion
 <pre>
 <a name="odd-" id="odd-"></a><span class="k">sub </span><span class="m">odd</span>  <span class="s">{</span> <span class="k">my</span> <span class="s">(</span><span class="i">$n</span><span class="s">)</span>=<span class="i">@_</span><span class="sc">;</span> <span class="i">$n</span> == <span class="n">0</span> ? <span class="n">0</span> <span class="co">:</span> <span class="w">even</span> <span class="s">(</span><span class="i">$n</span> - <span class="n">1</span><span class="s">)</span> <span class="s">}</span>
