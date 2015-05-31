@@ -44,7 +44,7 @@ for (1..1e6) { outer 10 };")))
      ;; first slide is treated specially in the layout by the js/css backend
      (slide title 
 	    (h2 presenter)
-	    (h4 (http-link "LeafPair.com")) ;; XX indent wrong
+	    (h4 (http-link "LeafPair.com"))
 	    (p (i "Note: a few changes have been applied since the presentation. You can see them in the commit history at "(link "https://github.com/pflanze/london.pm-talk") ".")))
 
      (slide "Why functional programming in Perl?"
