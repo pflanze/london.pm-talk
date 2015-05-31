@@ -131,8 +131,8 @@
 
 (def (_-link prot)
      (lambda (ref-without-protocol)
-       `(" " ,(ahref (string-append prot ref-without-protocol)
-		     ref-without-protocol))))
+       (ahref (string-append prot ref-without-protocol)
+	      ref-without-protocol)))
 
 (def http-link (_-link "http://"))
 (def https-link (_-link "https://"))
