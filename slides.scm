@@ -44,7 +44,7 @@ for (1..1e6) { outer 10 };")))
      (slide title 
 	    (h2 presenter)
 	    (h4 "LeafPair.com") ;; XX indent wrong
-	    )
+	    (p (i "Note: a few changes have been applied since the presentation. You can see them in the commit history at "(link "https://github.com/pflanze/london.pm-talk") ".")))
 
      (slide "Why functional programming in Perl?"
 	    "I ..."

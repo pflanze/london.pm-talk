@@ -116,7 +116,8 @@
 (dtag small)
 (dtag center)
 (dtag p)
-
+(dtag i)
+(dtag b)
 
 
 (def (ahref href . body)
