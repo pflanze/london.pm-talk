@@ -6,6 +6,7 @@
 (def (slideshow . slides)
      `(html
        (head
+	(*comment* "This file is GENERATED from slides.scm")
 	(title ,title)
 	;; <meta name="generator" content="S5" />
 	(meta (@ (name "generator")
